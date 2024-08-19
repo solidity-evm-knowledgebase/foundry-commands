@@ -113,21 +113,46 @@ cast send [to] [function] "store(uint256)" [params] 25 --private-key --rpc-url
 cast call [to] [function] "retrieve()"
 ```
 
+## Install Dependencies
+
+```
+forge install [package_name]
+````
+
 ## Format Code with Forge
 
 ```
 forge fmt
 ```
 
+## Test
+
+```
+forge test
+```
+
+for different level of visisbility use -v/ -vv/ -vvv (see stack traces)
+
+### Run a single function unit test
+
+```
+forge test -m [function_name]
+```
+
+### Run a Forked test
+
+Test the code on a simulated real environment:
+
+```
+forge test --fork-url [rpc-url]
+```
+
+### Check coverage of tests
+
+```
+forge coverage
+```
+
 ## Extra
 
-For extra information, [cyfrin foundry github link](https://github.com/Cyfrin/foundry-simple-storage-cu).
-
-
-
-
-
-
-
-
-
+For extra information, [cyfrin foundry github link](https://github.com/Cyfrin/foundry-full-course-cu).
