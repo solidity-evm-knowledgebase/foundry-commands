@@ -153,6 +153,39 @@ forge test --fork-url [rpc-url]
 forge coverage
 ```
 
+### Useful Stuff for Testing
+
+#### Create a new random address
+
+```
+address(i)
+```
+
+#### Create a new account
+
+```
+address USER = makeAddr("user");
+```
+
+#### Give an initial balance to the new account
+
+```
+uint256 USER_STARTING_BALANCE = 100 ether;
+vm.deal(USER, USER_STARTING_BALANCE);
+```
+
+#### Set msg.sender of next transaction
+
+```
+vm.prank(USER)
+```
+
+#### Set msg.sender + fund account
+
+```
+hoax(USER, 100 ether)
+```
+
 ## Extra
 
 For extra information, [cyfrin foundry github link](https://github.com/Cyfrin/foundry-full-course-cu).
