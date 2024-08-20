@@ -136,7 +136,7 @@ for different level of visisbility use -v/ -vv/ -vvv (see stack traces)
 ### Run a single function unit test
 
 ```
-forge test -m [function_name]
+forge test --match-test [function_name]
 ```
 
 ### Run a Forked test
