@@ -1,4 +1,4 @@
-# foundry-commands
+# foundry-fundamentals
 
 ## Installation:
 
@@ -153,6 +153,12 @@ forge test --fork-url [rpc-url]
 forge coverage
 ```
 
+### Check Gas Consumption of Tests
+
+```
+forge snapshot
+```
+
 ### Useful Stuff for Testing
 
 #### Create a new random address
@@ -185,6 +191,32 @@ vm.prank(USER)
 ```
 hoax(USER, 100 ether)
 ```
+
+#### Set Gas Price for Next Transaction
+
+```
+vm.taxGasPrice(WEI)
+```
+
+## Check Storage Layout of Contract
+
+```
+forge inspect [CONTRACT_NAME] storageLayout
+```
+
+### Using Cast to Get Value at Storage Slot
+
+```
+cast storage [CONTRACT_ADDRESS] [SLOT_NUMBER]
+```
+
+## Chisel
+
+```
+chisel
+```
+
+Chisel can be used to write Solidity directly in the terminal to quicly test logic.
 
 ## Extra
 
