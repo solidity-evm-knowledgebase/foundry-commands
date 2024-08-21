@@ -210,6 +210,12 @@ forge inspect [CONTRACT_NAME] storageLayout
 cast storage [CONTRACT_ADDRESS] [SLOT_NUMBER]
 ```
 
+## Use Cast to get function selector
+
+```
+cast sig "[FUNCTION_NAME]()"
+```
+
 ## Chisel
 
 ```
