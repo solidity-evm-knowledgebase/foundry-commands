@@ -224,6 +224,16 @@ chisel
 
 Chisel can be used to write Solidity directly in the terminal to quicly test logic.
 
+## Bonus
+
+### Headers
+
+Generate headers using this tool: https://github.com/transmissions11/headers
+
+```
+headers [name]
+```
+
 ## Extra
 
 For extra information, [cyfrin foundry github link](https://github.com/Cyfrin/foundry-full-course-cu).
