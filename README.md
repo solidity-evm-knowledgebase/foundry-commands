@@ -198,6 +198,49 @@ hoax(USER, 100 ether)
 vm.taxGasPrice(WEI)
 ```
 
+#### Test Reverts
+
+```
+ vm.expectRevert(Contract.errorName.selector);
+ contract.functionThatShouldRevert()
+```
+
+#### Test Emit Event
+
+Use vm.expectEmit()
+
+```
+vm.expectEmit(trueIfTopic1Exists, trueIfTopic2Exists, trueIfTopic3Exists, trueIfNonIndexedDataExists, contractAddressThatWillEmitEvent)
+emit event(params)
+```
+
+topics are the indexed params in the event
+
+for example, here we only have topic1:
+
+event RaffleEntered(address indexed player);
+
+it would look like this:
+
+```
+vm.expectEmit(true, false, false, false, address(raffle)
+emit RaffleEntered(PLAYER);
+```
+
+Note: Events need to be added at the top of the test file.
+
+#### Change block.timestamp
+
+```
+vm.warp(timestamp)
+```
+
+#### Change block.number
+
+```
+vm.roll(number)
+```
+
 ## Check Storage Layout of Contract
 
 ```
