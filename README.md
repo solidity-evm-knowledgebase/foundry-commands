@@ -247,6 +247,14 @@ vm.warp(timestamp)
 vm.roll(number)
 ```
 
+#### Get Recorded Logs
+
+```
+vm.recordLogs();
+contract.function();
+Vm.Log[] memory entries = vm.getRecordedLogs();
+```
+
 ## Check Storage Layout of Contract
 
 ```
