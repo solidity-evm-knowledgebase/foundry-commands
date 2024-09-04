@@ -153,6 +153,12 @@ forge test --fork-url [rpc-url]
 forge coverage
 ```
 
+#### Get Full Coverage Report
+
+```
+forge coverage --report debug > coverage.txt
+```
+
 ### Check Gas Consumption of Tests
 
 ```
