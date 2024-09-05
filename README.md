@@ -255,6 +255,13 @@ contract.function();
 Vm.Log[] memory entries = vm.getRecordedLogs();
 ```
 
+### Advanced Debugging
+
+```
+forge test --debug testFunctionName
+```
+
+
 ## Check Storage Layout of Contract
 
 ```
