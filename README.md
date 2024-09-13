@@ -208,7 +208,14 @@ vm.taxGasPrice(WEI)
 
 ```
  vm.expectRevert(Contract.errorName.selector);
- contract.functionThatShouldRevert()
+ contract.functionThatShouldRevert();
+```
+
+#### Test Reverts with args
+
+```
+vm.expectRevert(abi.encodeWithSelector(Contract.errorName.selector, args1, args2);
+contract.functionThatShouldRevert();
 ```
 
 #### Test Emit Event
